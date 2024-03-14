@@ -36,7 +36,7 @@ export default function Modal(props: TModal) {
   }
   
   return (
-    <div className='absolute w-full h-full bg-black/90 top-0 px-6'>
+    <div className='absolute w-full h-full bg-black/90 top-0 px-6 z-20'>
       <Image onClick={onToggleModal} className={'absolute top-4 right-4 cursor-pointer'} width={12} height={12} src={ExitLogo} alt={'exit-logo'}/>
       <div className='relative'>
         <p className={'mt-[30vh] text-white text-center text-xl mb-5'}>Search</p>

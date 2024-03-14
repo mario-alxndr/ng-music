@@ -15,14 +15,14 @@ export default function Header(props: THeader) {
   
   return (
     <header className={'bg-color-header py-[20px] px-[16px] h-[60px] flex justify-between relative'}>
-      <button>
+      <button className={'z-10'} >
         <Image src={MenuLogo} alt={'menu-logo'} width={20} height={20} />
       </button>
-      <Image src={MusicLogo} alt={'music-logo'} width={100} height={16} />
-      <button onClick={onOpenModal}>
+      <Image className={'z-10'} src={MusicLogo} alt={'music-logo'} width={100} height={16} />
+      <button className={'z-10'} onClick={onOpenModal}>
         <Image src={SearchLogo} alt={'search-logo'} width={20} height={20} />
       </button>
-      <div className={'bg-color-header w-full h-[80px] absolute z-[-1] top-[-5px] left-0 border rounded-[15%] border-none'}/>
+      <div className={'bg-color-header w-full h-[80px] absolute z-0 top-[-5px] left-0 border rounded-[15%] border-none'}/>
     </header>
   );
 }
