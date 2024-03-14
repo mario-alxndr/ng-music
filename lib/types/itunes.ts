@@ -1,0 +1,30 @@
+export type iTunesMediaType = {
+    artistName: string;
+    artworkUrl30: string;
+    artworkUrl60: string;
+    artworkUrl100: string;
+    collectionExplicitness: string
+    collectionHdPrice: number;
+    collectionPrice: number; 
+    collectionName: string;
+    contentAdvisoryRating: string;
+    country: string;
+    currency: string;
+    kind: string;
+    longDescription: string;
+    previewUrl: string;
+    primaryGenreName: string;
+    releaseDate: string; 
+    shortDescription: string;
+    trackCensoredName: string;
+    trackExplicitness: string;
+    trackHdPrice: number; 
+    trackHdRentalPrice: number; 
+    trackId: number; 
+    trackName: string;
+    trackPrice: number; 
+    trackRentalPrice: number;
+    trackTimeMillis: number;
+    trackViewUrl: string;
+    wrapperType: string;
+  }
