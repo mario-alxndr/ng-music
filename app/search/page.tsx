@@ -28,7 +28,7 @@ export default function SearchPage() {
   const [limit, setLimit] = useState<number>(4);
   const [isOpenModal, setIsOpen] = useState<boolean>(false);
 
-  const { data: initialItunesItem, isLoading, refetch: refetchItunesItem } = useQuery({
+  const { data: initialItunesItem, isLoading } = useQuery({
     queryKey: ['get-itunes-item', limit, inputText], 
     queryFn: () => getItunesItem(
       {
@@ -40,12 +40,10 @@ export default function SearchPage() {
 
   const handleClickLoadMore = () => {
     setLimit(limit+4);
-    // refetchItunesItem();
   };
 
   const handleClickSearch = (newTermValue: string) => {
     setInputText(newTermValue);
-    // refetchItunesItem();
     router.replace(`search?term=${encodeURIComponent(newTermValue)}`);
     handleToggleModal();
   };
@@ -84,6 +82,7 @@ export default function SearchPage() {
           <Modal 
             inputText={inputText}
             onClickSearch={handleClickSearch}
+            onToggleModal={handleToggleModal}
           />
         )}
       </div>
