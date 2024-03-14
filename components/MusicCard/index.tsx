@@ -31,7 +31,7 @@ export default function MusicCard(props: TMusicCard) {
     <div 
       key={trackId} 
       className={'h-32 bg-white p-[12px] border-radius rounded-xl mb-[20px] card-music flex gap-5 relative'}>
-      <Image className={'rounded-[10px] min-w-[100px]'} src={artworkUrl100} width={100} height={100} alt={`music-card-${trackId}`}/>
+      <Image className={'rounded-[10px] min-w-[100px] max-h-[100px]'} src={artworkUrl100} width={100} height={100} alt={`music-card-${trackId}`}/>
       <Image className={'absolute left-[50px] top-[50px]'}src={PlayButtonLogo} width={32} height={32} alt={'play-button-logo'}/>
       <div className={'relative w-full'}>
         <p className={'text-[10px] text-black font-medium'}>{artistName}</p>
