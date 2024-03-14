@@ -49,8 +49,7 @@ export default function HomePage() {
           />
           <button 
             className={'block w-full h-[40px] mt-[15px] mb-[26px] rounded-[20px] search-button'}
-            onClick={handeClickSearchPage} 
-            // disabled={!textInput}
+            onClick={handeClickSearchPage}
           >
               <p className={'text-white text-xs'}>Search</p>
           </button>

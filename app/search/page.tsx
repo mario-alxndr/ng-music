@@ -65,7 +65,7 @@ export default function SearchPage() {
             <p className={'text-center my-[16px]'}>Loading please wait...</p>
           ) : results.length > 0 ? (
             results.map((ituneItem: iTunesMediaType) => (
-              <MusicCard ituneItem={ituneItem}/>
+              <MusicCard ituneItem={ituneItem} key={ituneItem.trackId}/>
             ))
           ) : (
             <p className={'text-center my-[16px]'}>Empty result, please change or fill term search param</p>
