@@ -1,14 +1,14 @@
 'use client'
 
 // Node Modules
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter, useSearchParams } from "next/navigation";
 import { useQuery, QueryClient } from '@tanstack/react-query';
 
 // Components
-import Header from '../components/Header';
-import Modal from '../components/Modal';
-import MusicCard from '../components/MusicCard';
+import Header from '@/components/Header';
+import Modal from '@/components/Modal';
+import MusicCard from '@/components/MusicCard';
 
 // Lib
 import { getItunesItem } from '@/lib/services/getItunesItem';
@@ -20,6 +20,7 @@ const queryClient = new QueryClient();
 
 export default function SearchPage() {
   const searchParam = useSearchParams();
+
   const router = useRouter();
   const termParam = searchParam.get('term');
 
